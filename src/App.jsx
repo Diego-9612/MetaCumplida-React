@@ -4,12 +4,36 @@ import { InputTareas } from "./componentes/BuscadorTareas";
 import { ListaTareas } from "./componentes/ListaTareas";
 import { ItemTarea } from "./componentes/ItemTarea";
 import { BotonCrearTarea } from "./componentes/BotonCrearTarea";
-import { Tareas } from "./data";
 import React from "react";
+
+function useLocalStorage(itemNombre, valorInicial) {
+
+  const localStorageItems = localStorage.getItem(itemNombre);
+
+  let jsonItems;
+
+  if (!localStorageItems) {
+    localStorage.setItem(itemNombre, JSON.stringify(valorInicial));
+    jsonItems = valorInicial;
+  } else {
+    jsonItems = JSON.parse(localStorageItems);
+  }
+
+  const [item, setItem] = React.useState(jsonItems);
+
+  const guardarItems = (nuevoItem) => {
+    localStorage.setItem(itemNombre, JSON.stringify(nuevoItem));
+    setItem(nuevoItem);
+  }
+
+  return [item, guardarItems]
+
+}
 
 function App() {
 
-  const [tareas, setTareas] = React.useState(Tareas);
+
+  const [tareas, guardarItems] = useLocalStorage('TAREAS_V1', []);
 
   const tareasCompletas = tareas.filter(tarea => !!tarea.estado).length;
   const tareasTotales = tareas.length;
@@ -25,7 +49,7 @@ function App() {
     const nuevasTareas = [...tareas];
     const indexTarea = nuevasTareas.findIndex(tarea => tarea.text === text);
     nuevasTareas[indexTarea].estado = true;
-    setTareas(nuevasTareas)
+    guardarItems(nuevasTareas)
   }
 
   const eliminarTarea = (text) => {
@@ -33,7 +57,7 @@ function App() {
     const indexTarea = nuevasTareas.findIndex(tarea => tarea.text === text);
     nuevasTareas.splice(indexTarea, 1);
     alert('Has Eliminado una Tarea de la Lista')
-    setTareas(nuevasTareas)
+    guardarItems(nuevasTareas)
   }
 
   return (
@@ -48,12 +72,12 @@ function App() {
         <main className="flex flex-col items-center justify-center w-full">
           <ListaTareas>
             {filtrarTareas.map((tarea) => (
-              <ItemTarea 
-              key={tarea.text} 
-              text={tarea.text} 
-              estado={tarea.estado}
-              onEstado={() => completarTarea(tarea.text)}
-              onEliminar={() => eliminarTarea(tarea.text)} />
+              <ItemTarea
+                key={tarea.text}
+                text={tarea.text}
+                estado={tarea.estado}
+                onEstado={() => completarTarea(tarea.text)}
+                onEliminar={() => eliminarTarea(tarea.text)} />
             ))}
           </ListaTareas>
         </main>
