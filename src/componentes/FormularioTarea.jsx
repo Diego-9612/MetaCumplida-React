@@ -1,4 +1,4 @@
-import { TareaContext } from "./TareaContext";
+import { TareaContext } from "../Componentes/TareaContext";
 import React from "react";
 
 function FormularioTarea() {

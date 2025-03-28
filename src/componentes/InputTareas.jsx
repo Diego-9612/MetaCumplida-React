@@ -1,5 +1,5 @@
 import React from "react";
-import { TareaContext } from "./TareaContext";
+import { TareaContext } from "../Componentes/TareaContext";
 
 function InputTareas() {
 
