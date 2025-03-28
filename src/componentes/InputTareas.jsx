@@ -1,6 +1,9 @@
 import React from "react";
+import { TareaContext } from "./TareaContext";
 
-function InputTareas({buscarTareas, setBuscarTareas}) {
+function InputTareas() {
+
+    const {buscarTareas, setBuscarTareas} = React.useContext(TareaContext);
 
     return (
 

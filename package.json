@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/spinner": "^2.1.0",
     "@fontsource/knewave": "^5.2.5",
     "organizador-tareas-react": "file:",
     "react": "^19.0.0",
