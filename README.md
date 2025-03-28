@@ -1,12 +1,42 @@
-# React + Vite
+# 📝 MetaCumplida
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Descripción
+Esta es una aplicación web de lista de tareas (To-Do List) desarrollada con **Vite**, **React 19** y **TailwindCSS**. Permite a los usuarios agregar, completar y eliminar tareas de manera eficiente y con una interfaz amigable.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías Utilizadas
+- ⚡ **Vite**: Para una configuración rápida y eficiente del proyecto.
+- ⚛️ **React 19**: Para la construcción de la interfaz de usuario.
+- 🎨 **TailwindCSS**: Para un diseño moderno y estilizado.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Capturas de Pantalla
+![image](https://github.com/user-attachments/assets/35ec63bb-b977-499e-a08c-88e83c5b2b87)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🌍 Demo en Producción
+🔗 [Ver en Vercel](URL_DEL_PROYECTO)
+
+## 📦 Instalación y Uso
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/Diego-9612/MetaCumplida-React
+   ```
+2. Ingresa al directorio del proyecto:
+   ```sh
+   cd MetaCumplida-React
+   ```
+3. Instala las dependencias:
+   ```sh
+   npm install
+   ```
+4. Inicia el servidor de desarrollo:
+   ```sh
+   npm run dev
+   ```
+
+## 📄 Licencia
+Este proyecto está bajo la licencia MIT. Puedes consultar el archivo `LICENSE` para más detalles.
+
+## 👨‍💻 Autor
+Desarrollado por **Diego Fernando Guerrero Perez - CodewebStudio**.
+
+
