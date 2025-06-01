@@ -3,7 +3,7 @@ import { ContadorTareas } from "../Componentes/ContadorTareas";
 import { InputTareas } from "../Componentes/InputTareas";
 import { BotonCrearTarea } from "../Componentes/BotonCrearTarea";
 import { ListaTareas } from "../Componentes/ListaTareas";
-import { TareaContext } from "../Componentes/TareaContext";
+import { TareaContext } from "../Componentes/TareaContext"; 
 import { ErrorTareas } from "../Componentes/ErrorTareas";
 import { ItemTarea } from "../Componentes/ItemTarea";
 import { TareasVacias } from "../Componentes/TareasVacias";
